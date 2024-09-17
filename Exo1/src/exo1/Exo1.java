@@ -25,7 +25,7 @@ public class Exo1 {
         sc = new Scanner(System.in);
         System.out.println("Bonjour, quel est votre prenom ?");
         prenom = sc.nextLine();
-        System.out.println("Votre prénom est " +prenom);
+        System.out.println("Votre prenom est " +prenom);
     }
     
 }
