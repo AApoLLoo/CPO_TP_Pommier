@@ -5,7 +5,7 @@
 package calculator;
 
 /**
- * @Auteur  Pommier Antoine!!!!
+ * @Auteur  Pommier Antoine
  * @Groupe  TDC
  * @Role du programe Faire une calculatrice
  * @Date 17/09/2024
@@ -23,25 +23,29 @@ public class Calculator {
         float result = 0;
         Scanner sc = new Scanner(System.in);
         System.out.println("""
-                            Rentrez une valeur selon l'operateur souhaite :
+                           Rentrez une valeur selon l'operateur souhaite :
                            1) add
                            2) substract
                            3) multiply
                            4) divide
                            5) modulo""");
         operateur=sc.nextInt();
+        while (operateur!=1 && operateur!=2 && operateur!=3 && operateur!=4 && operateur!=5) {
+        System.out.println("Veuillez choisir un nombre entre 1,2,3,4,5.");
+        operateur=sc.nextInt();
+    }
         System.out.println("Saisir une premiere valeur ");
         operande1=sc.nextFloat();
         System.out.println("Saisir une deuxieme valeur ");
         operande2=sc.nextFloat();
         switch (operateur) {
-            case (1) :  result = operande1+operande2;
-            case (2) :  result = operande1-operande2;
-            case (3) :  result = operande1*operande2;
-            case (4) :  result = operande1/operande2;
-            case (5) :  result = operande1%operande2;
-            default :   System.out.println("Selectionnez une valeur entre 1 et 5");
+            case (1) -> result = operande1+operande2;
+            case (2) -> result = operande1-operande2;
+            case (3) -> result = operande1*operande2;
+            case (4) -> result = operande1/operande2;
+            case (5) -> result = operande1%operande2;
+            default -> System.out.println("Selectionnez une valeur entre 1 et 5");
         }
-        System.out.println("Le resultat est : " +result);
+        System.out.println("Le resultat est " +result);
     }
 }
