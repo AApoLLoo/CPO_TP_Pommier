@@ -34,11 +34,11 @@ public class TP1_stats_Pommier {
             Tab[l]= j;
         }
         for (int w = 0; w != 5; w++) {
-            System.out.println("Horrible TABLEAU : "+Tab[w]);
+            System.out.println("Tableau : "+Tab[w]);
         }
         for (int k = 0; k != 5; k++){
             double nbr = (Tab[k]*100)/m;
-            System.out.println("/n"+"Horrible Nombre : "+nbr);
+            System.out.println("/n"+"Pourcentage : "+nbr);
         }
     }
 }
