@@ -32,6 +32,7 @@ public class TP2_relation_1_Pommier {
         bob.ajoutVoiture(uneMicra);
         reno.ajoutVoiture(une2008);
         reno.ajoutVoiture(uneMicra);
+        System.out.println(bob.ajoutVoiture(une2008));
         System.out.println("La première voiture de Bob est la suivante : " + bob.listeVoitures[0]);
         System.out.println("Les voitures de Bob : " + "\n" + bob.getListeVoitures() + ". Il a donc un total de " + bob.nbVoitures + " dans son garage.");
         System.out.println("Les voitures de Bob : " + "\n" + reno.getListeVoitures() + ". Il a donc un total de " + reno.nbVoitures + " dans son garage.");
