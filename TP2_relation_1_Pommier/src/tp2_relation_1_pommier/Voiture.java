@@ -5,8 +5,10 @@
 package tp2_relation_1_pommier;
 
 /**
- *
- * @author pommi
+ * @Auteur Pommier Antoine
+ * @Groupe TDC
+ * @Role du programe
+ * @Date 23/10/2024
  */
 public class Voiture {
     String Modele;
