@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Armes;
+package ArmesPackage;
 /**
  *
  * @author pommi
@@ -19,5 +19,8 @@ public class Baton extends Armes {
     public int AgeBaton(){
         return age;
     }
-    
+    @Override
+    public String toString(){
+        return "L'arme s'apelle : "+nom+" et son niveau d'attaque est de : "+niveau+" et son age est de "+age +"ans";
+    }
 }

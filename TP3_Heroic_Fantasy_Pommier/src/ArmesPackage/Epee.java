@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package Armes;
+package ArmesPackage;
 /**
  *
  * @author pommi
@@ -18,5 +18,9 @@ public class Epee extends Armes{
     }
     public int FinesseArmes(){
         return finesse;
+    }
+            @Override
+    public String toString(){
+        return "L'arme s'apelle : "+nom+" et son niveau d'attaque est de : "+niveau+" et sa finesse est de "+finesse;
     }
 }

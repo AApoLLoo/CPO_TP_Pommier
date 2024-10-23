@@ -3,12 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package tp3_heroic_fantasy_pommier;
-import Personnages.Magicien;
-import Personnages.Personnages;
-import Personnages.Guerrier;
-import Armes.Baton;
-import Armes.Epee;
-import Armes.Armes;
+import PersonnagesPackage.Magicien;
+import PersonnagesPackage.Personnages;
+import PersonnagesPackage.Guerrier;
+import ArmesPackage.Baton;
+import ArmesPackage.Epee;
+import ArmesPackage.Armes;
 import java.util.ArrayList;
 /**
  *
