@@ -5,8 +5,10 @@ package tp2_bieres_pommier_antoine;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 /**
- *
- * @author pommi
+ * @Auteur Pommier Antoine
+ * @Groupe TDC
+ * @Role du programe
+ * @Date 11/10/2024
  */
 public class BouteilleBiere {
     String nom;
