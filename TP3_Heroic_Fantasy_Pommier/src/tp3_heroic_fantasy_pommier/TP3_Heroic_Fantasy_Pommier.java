@@ -11,8 +11,10 @@ import ArmesPackage.Epee;
 import ArmesPackage.Armes;
 import java.util.ArrayList;
 /**
- *
- * @author pommi
+ * @Auteur Pommier Antoine
+ * @Groupe TDC
+ * @Role du programe
+ * @Date 06/11/2024
  */
 public class TP3_Heroic_Fantasy_Pommier {
 
@@ -23,14 +25,18 @@ public class TP3_Heroic_Fantasy_Pommier {
         ArrayList<Armes> listeArmes = new ArrayList<>();
         Epee excalibur = new Epee("Excalibur",7,5);
         Epee durandal = new Epee("Durandal",4,7);
-        Baton chene = new Baton("Chêne",4,5);
+        Epee fauxmortuaire = new Epee("Faux Mortuaire",12,8);
+        Baton chene = new Baton("Chene",4,5);
         Baton charme = new Baton("Charme",5,6);
+        Baton lamedelenora = new Baton ("Lame de l enora",6,4);
         System.out.println(excalibur);
         listeArmes.add(excalibur);
         listeArmes.add(durandal);
+        listeArmes.add(fauxmortuaire);
         listeArmes.add(chene);
         listeArmes.add(charme);
-        System.out.println("La liste contient " + listeArmes.size() + " elements");
+        listeArmes.add(lamedelenora);
+        // System.out.println("La liste contient " + listeArmes.size() + " elements");
         for (int i = 0; i < listeArmes.size(); i++) {
             System.out.println(listeArmes.get(i));
         }
@@ -47,6 +53,15 @@ public class TP3_Heroic_Fantasy_Pommier {
         for (int i = 0; i < listePersonnages.size(); i++) {
             System.out.println(listePersonnages.get(i));
         }
+        conan.ajouterArme(excalibur);
+        conan.ajouterArme(durandal);
+        conan.ajouterArme(lamedelenora);
+        gandalf.ajouterArme(chene);
+        gandalf.ajouterArme(charme);
+        gandalf.ajouterArme(fauxmortuaire);
+        conan.equiperArme("excalibur");
+        System.out.println("Nombre d'armes de predilection : " + conan.compterArmesDePredilection("Epee"));
+
 }
 }
     
