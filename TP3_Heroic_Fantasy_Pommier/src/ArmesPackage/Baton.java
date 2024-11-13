@@ -8,16 +8,21 @@ package ArmesPackage;
  * @author pommi
  */
 public class Baton extends Armes {
-    int age;
+    private int age;
+    private String type;
     public Baton(String nom, int niveau, int age){
         super(nom, niveau);
         if (age >100){
             throw new IllegalArgumentException("L'age de l'arme est supérieur à 100");
         }
         this.age = age;
+        this.type = "Baton";
     }
     public int AgeBaton(){
         return age;
+    }
+    public String TypeArmes(){
+        return type;
     }
     @Override
     public String toString(){

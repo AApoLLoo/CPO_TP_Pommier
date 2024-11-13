@@ -6,25 +6,55 @@ package PersonnagesPackage;
 
 import java.util.ArrayList;
 import ArmesPackage.Armes;
+import tp3_heroic_fantasy_pommier.etreVivant;
 
 /**
  *
  * @author pommi
  */
-public abstract class Personnages {
-
-    String nom;
+public abstract class Personnages implements etreVivant{
+    private String nom;
     int NiveauVie;
     private ArrayList<Armes> inventaire;
-    private Armes ArmesMain;
+    Armes ArmesMain;
+    private static int nombresPersonnages = 0;
+    static int nombresGuerriers = 0;
+    static int nombresMagiciens;
 
     public Personnages(String nom, int NiveauVie) {
         this.nom = nom;
         this.NiveauVie = NiveauVie;
         this.inventaire = new ArrayList<>();
         this.ArmesMain = null;
+        nombresPersonnages++;
     }
-
+    @Override
+    public void seFatiguer(){
+        NiveauVie -= 10;
+    }
+    @Override
+    public boolean estVivant(){
+        return NiveauVie > 0;
+    }
+    @Override
+    public void estAttaque(int points){
+        NiveauVie -= points;
+    }
+    @Override
+    public void finalize(){
+        nombresPersonnages--;
+    }
+    public void attaque(Personnages autre){
+    }
+    public static int getNombresPersonnages(){
+        return nombresPersonnages;
+    }
+    public static int getNombresGuerriers(){
+       return nombresGuerriers;
+   }
+    public static int getNombresMagiciens(){
+        return nombresMagiciens;
+    }
     public int NiveauViePersonnage() {
         return NiveauVie;
     }
@@ -36,21 +66,22 @@ public abstract class Personnages {
     public void ajouterArme(Armes Armes) {
         if (inventaire.size() < 5) {
             inventaire.add(Armes);
-            System.out.println(Armes.NomArmes() + " ajoutée à l'inventaire.");
+            System.out.println(Armes.NomArmes() + " ajoutee a l'inventaire de "+ NomPersonnage());
+            
         } else {
             System.out.println("Inventaire plein, impossible d'ajouter l'arme.");
         }
     }
 
-    public void equiperArme(String nomArme) {
-        for (Armes Armes : inventaire) {
-            if (Armes.NomArmes().equals(nomArme)) {
-                ArmesMain = Armes;
-                System.out.println(nomArme + " est maintenant équipée.");
+    public void equiperArme(Armes nomArme) {
+        for (Armes arme : inventaire) {
+            if (arme == nomArme) {                                        
+                ArmesMain = arme;
+                System.out.println("Arme trouvee et equipee : " + ArmesMain);
                 return;
             }
         }
-        System.out.println("L'arme " + nomArme + " n'est pas dans l'inventaire.");
+        System.out.println("Arme " + nomArme + " non trouvee dans l'inventaire.");
     }
 
     public Armes getArmesMain() {
@@ -68,10 +99,12 @@ public abstract class Personnages {
         return description;
     }
 
-    public int compterArmesDePredilection(Class<? extends Armes> typeArme) {
+    public int compterArmesDePredilection(String typePredilection) {
         int compteur = 0;
         for (Armes arme : inventaire) {
-            if (typeArme.isInstance(arme)) {
+            String type = arme.getClass().getSimpleName();
+            System.out.println(type);
+            if (type == typePredilection) {
                 compteur++;
             }
         }

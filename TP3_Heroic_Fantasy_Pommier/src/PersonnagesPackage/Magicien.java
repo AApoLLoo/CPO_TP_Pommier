@@ -13,6 +13,18 @@ public class Magicien extends Personnages {
     public Magicien(String nom, int NiveauVie, boolean confirme){
         super(nom,NiveauVie);
         this.confirme=confirme;
+        nombresMagiciens++;
+    }
+    @Override
+    public void finalize(){
+        super.finalize();
+        nombresMagiciens--;
+    }
+    public void attaquer(Personnages autre){
+        int degats = ArmesMain.NiveauArmes();
+        if (ArmesMain.TypeArmes().equals("Bâton"))
+       autre.estAttaque(20);
+       System.out.println("Le magicien attaque "+autre.NomPersonnage()+" et inflige 20 points de degats !");
     }
     public boolean MagicienConfirme(){
         return confirme;
@@ -22,6 +34,6 @@ public class Magicien extends Personnages {
     }
     @Override
     public String toString(){
-        return "Le nom du personnage est : "+nom+" et son niveau de vie est de : "+NiveauVie+ " PV"+" et il est "+ (confirme ? "confirme" : "novice");
+        return "Le nom du personnage est : "+NomPersonnage()+" et son niveau de vie est de : "+NiveauViePersonnage()+" PV"+" et il est "+ (confirme ? "confirme" : "novice");
     }
 }

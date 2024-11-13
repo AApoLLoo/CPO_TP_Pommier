@@ -23,6 +23,7 @@ public abstract class Armes {
     public String NomArmes(){
         return nom;
     }
+        
     @Override
     public String toString(){
         return "L'arme s'apelle : "+nom+" et son niveau d'attaque est de : "+niveau;
