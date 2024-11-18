@@ -9,20 +9,18 @@ package ArmesPackage;
  */
 public class Epee extends Armes{
     private int finesse;
-    private String type;
     public Epee(String nom,int niveau, int finesse){
         super (nom, niveau);
         if (finesse > 100){
             throw new IllegalArgumentException("La finesse de l'arme est supérieure à 100");
         }
         this.finesse = finesse;
-        this.type = "Epee";
     }
     public int FinesseArmes(){
         return finesse;
     }
-    public String TypeArmes(){
-        return type;
+    public String getTypeArmes(){
+        return "Epee";
     }
     @Override
     public String toString(){

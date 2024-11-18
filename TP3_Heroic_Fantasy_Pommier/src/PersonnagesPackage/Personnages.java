@@ -13,9 +13,9 @@ import tp3_heroic_fantasy_pommier.etreVivant;
  * @author pommi
  */
 public abstract class Personnages implements etreVivant{
-    private String nom;
+    private final String nom;
     int NiveauVie;
-    private ArrayList<Armes> inventaire;
+    public final ArrayList<Armes> inventaire;
     Armes ArmesMain;
     private static int nombresPersonnages = 0;
     static int nombresGuerriers = 0;

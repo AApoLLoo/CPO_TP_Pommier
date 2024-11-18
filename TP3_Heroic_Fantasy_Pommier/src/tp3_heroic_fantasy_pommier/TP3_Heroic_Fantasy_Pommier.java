@@ -62,6 +62,8 @@ public class TP3_Heroic_Fantasy_Pommier {
         gandalf.ajouterArme(charme);
         gandalf.ajouterArme(fauxmortuaire);
         conan.equiperArme(excalibur);
+        conan.equiperArme(durandal);
+        //System.out.println(conan.getArmesMain());
         System.out.println("Nombre d'armes de predilection : " + conan.compterArmesDePredilection("Epee"));
         System.out.println("Nombres de personnages : " + Personnages.getNombresPersonnages());
         System.out.println("Nombres de guerriers : " + Personnages.getNombresGuerriers());
@@ -74,7 +76,9 @@ public class TP3_Heroic_Fantasy_Pommier {
         } else {
             System.out.println("Le guerrier n'est plus vivant.");
         }
+        conan.getArmesMain();
         conan.attaquer(gandalf);
         System.out.println(gandalf);
+        System.out.println(conan.getArmesMain().NiveauArmes());
     }
 }
