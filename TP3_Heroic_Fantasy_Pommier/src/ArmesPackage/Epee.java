@@ -16,7 +16,7 @@ public class Epee extends Armes{
         }
         this.finesse = finesse;
     }
-    public int FinesseArmes(){
+    public int getFinesse(){
         return finesse;
     }
     public String getTypeArmes(){

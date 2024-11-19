@@ -25,12 +25,12 @@ public class TP3_Heroic_Fantasy_Pommier {
      */
     public static void main(String[] args) {
         ArrayList<Armes> listeArmes = new ArrayList<>();
-        Epee excalibur = new Epee("Excalibur", 7, 5);
-        Epee durandal = new Epee("Durandal", 4, 7);
-        Epee fauxmortuaire = new Epee("Faux Mortuaire", 12, 8);
-        Baton chene = new Baton("Chene", 4, 5);
-        Baton charme = new Baton("Charme", 5, 6);
-        Baton lamedelenora = new Baton("Lame de l enora", 6, 4);
+        Epee excalibur = new Epee("Excalibur", 50, 12);
+        Epee durandal = new Epee("Durandal", 43, 12);
+        Epee fauxmortuaire = new Epee("Faux Mortuaire", 65, 42);
+        Baton chene = new Baton("Chene", 70, 41);
+        Baton charme = new Baton("Charme", 62, 41);
+        Baton lamedelenora = new Baton("Lame de l enora", 17, 58);
         System.out.println(excalibur);
         listeArmes.add(excalibur);
         listeArmes.add(durandal);
@@ -42,10 +42,10 @@ public class TP3_Heroic_Fantasy_Pommier {
         for (int i = 0; i < listeArmes.size(); i++) {
             System.out.println(listeArmes.get(i));
         }
-        Magicien gandalf = new Magicien("Gandalf", 65, true);
-        Magicien garcimore = new Magicien("Garcimore", 44, false);
-        Guerrier conan = new Guerrier("Conan", 78, false);
-        Guerrier lannister = new Guerrier("Lannister", 45, true);
+        Magicien gandalf = new Magicien("Gandalf", 50, true);
+        Magicien garcimore = new Magicien("Garcimore", 50, false);
+        Guerrier conan = new Guerrier("Conan", 100, false);
+        Guerrier lannister = new Guerrier("Lannister", 100, true);
         ArrayList<Personnages> listePersonnages = new ArrayList<>();
         listePersonnages.add(gandalf);
         listePersonnages.add(garcimore);
@@ -64,7 +64,7 @@ public class TP3_Heroic_Fantasy_Pommier {
         conan.equiperArme(excalibur);
         conan.equiperArme(durandal);
         //System.out.println(conan.getArmesMain());
-        System.out.println("Nombre d'armes de predilection : " + conan.compterArmesDePredilection("Epee"));
+        System.out.println("Nombre d'armes de predilection : " + conan.compterArmesDePredilection());
         System.out.println("Nombres de personnages : " + Personnages.getNombresPersonnages());
         System.out.println("Nombres de guerriers : " + Personnages.getNombresGuerriers());
         System.out.println("Nombres de magiciens : " + Personnages.getNombresMagiciens());
@@ -77,8 +77,18 @@ public class TP3_Heroic_Fantasy_Pommier {
             System.out.println("Le guerrier n'est plus vivant.");
         }
         conan.getArmesMain();
-        conan.attaquer(gandalf);
+        //conan.attaquer(gandalf);
         System.out.println(gandalf);
         System.out.println(conan.getArmesMain().NiveauArmes());
+        gandalf.attaquer(conan);
+        System.out.println("Après l'attaque du magicien :");
+        System.out.println(gandalf);
+        System.out.println(conan);
+        conan.attaquer(gandalf);
+        System.out.println("Après l'attaque du guerrier :");
+        System.out.println(gandalf);
+        System.out.println(conan);
+        System.out.println("Le magicien est-il vivant ? " + gandalf.estVivant());
+        System.out.println("Le guerrier est-il vivant ? " + conan.estVivant());
     }
 }

@@ -20,15 +20,6 @@ public class Magicien extends Personnages {
         super.finalize();
         nombresMagiciens--;
     }
-    public void attaquer(Personnages autre){
-        int degats = ArmesMain.NiveauArmes(); 
-        if (ArmesMain.getTypeArmes()) { 
-        degats *= ArmesMain.AgeBaton(); 
-    } 
-    if (confirme) { degats /= 2; } autre.estAttaque(degats); 
-    this.seFatiguer();
-    System.out.println("Le magicien attaque "+autre.NomPersonnage()+" et inflige 20 points de degats !");
-    }
     public boolean MagicienConfirme(){
         return confirme;
     }

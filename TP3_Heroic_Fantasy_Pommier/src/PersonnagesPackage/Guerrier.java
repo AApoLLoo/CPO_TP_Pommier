@@ -20,10 +20,6 @@ public class Guerrier extends Personnages {
         super.finalize();
         nombresGuerriers--;
     }
-    public void attaquer(Personnages autre){
-        autre.estAttaque(30);
-        System.out.println("Le guerrier attaque "+autre.NomPersonnage()+" et lui inflige 30 points de degats !");
-    }
     public boolean GuerrierCheval(){
         return cheval;
     }
