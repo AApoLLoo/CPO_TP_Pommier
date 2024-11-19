@@ -135,9 +135,9 @@ public abstract class Personnages implements etreVivant {
 
             // Le personnage attaque l'autre personnage et lui inflige des dégâts
             autre.estAttaque(degats);
-            System.out.println(this.nom + " inflige " + degats + " dégâts à " + autre.nom);
+            System.out.println(this.nom + " inflige " + degats + " degats a " + autre.nom);
         } else {
-            System.out.println(this.nom + " n'a pas d'arme équipée et ne peut pas attaquer !");
+            System.out.println(this.nom + " n'a pas d'arme equipee et ne peut pas attaquer !");
         }
     }
 

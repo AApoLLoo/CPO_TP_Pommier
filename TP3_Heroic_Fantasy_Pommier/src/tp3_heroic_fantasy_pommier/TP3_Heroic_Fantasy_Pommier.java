@@ -81,11 +81,11 @@ public class TP3_Heroic_Fantasy_Pommier {
         System.out.println(gandalf);
         System.out.println(conan.getArmesMain().NiveauArmes());
         gandalf.attaquer(conan);
-        System.out.println("Après l'attaque du magicien :");
+        System.out.println("Apres l'attaque du magicien :");
         System.out.println(gandalf);
         System.out.println(conan);
         conan.attaquer(gandalf);
-        System.out.println("Après l'attaque du guerrier :");
+        System.out.println("Apres l'attaque du guerrier :");
         System.out.println(gandalf);
         System.out.println(conan);
         System.out.println("Le magicien est-il vivant ? " + gandalf.estVivant());
